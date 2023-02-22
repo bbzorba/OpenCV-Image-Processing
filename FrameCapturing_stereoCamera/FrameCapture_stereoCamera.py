@@ -18,8 +18,8 @@ while True :
     # Extract left and right images from side-by-side
     combined_image = numpy.split(frame, 2, axis=1)
     #Save images
-    left_image = '/home/esc/Desktop/stereoCamera_lidar/image_outputs/stereoImage_left_{}.tif'.format(datetime.now().strftime("%d_%m_%Y__%H_%M_%S"))
-    right_image = '/home/esc/Desktop/stereoCamera_lidar/image_outputs/stereoImage_right_{}.tif'.format(datetime.now().strftime("%d_%m_%Y__%H_%M_%S"))
+    left_image = '/home/ubuntu/image_outputs/stereoImage_left_{}.tif'.format(datetime.now().strftime("%d_%m_%Y__%H_%M_%S"))
+    right_image = '/home/ubuntu/image_outputs/stereoImage_right_{}.tif'.format(datetime.now().strftime("%d_%m_%Y__%H_%M_%S"))
     cv2.imwrite(right_image, combined_image[0])
     cv2.imwrite(left_image, combined_image[1])
 
